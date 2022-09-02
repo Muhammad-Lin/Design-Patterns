@@ -31,6 +31,7 @@ public class StarbuzzCoffee {
 
         //一杯加了豆浆、摩卡、奶泡的综合咖啡
         Beverage beverage2 = new HouseBlend();
+        beverage2.setSize(Beverage.Size.GRANDE);
         beverage2 = new Soy(beverage2);
         beverage2 = new Mocha(beverage2);
         beverage2 = new Whip(beverage2);

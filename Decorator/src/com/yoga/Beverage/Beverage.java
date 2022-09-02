@@ -13,10 +13,23 @@ public abstract class Beverage {
      * 饮料描述
      */
     String description = "未知饮料";
-
+    Size size = Size.TALL;
+    public enum Size{
+        TALL,
+        GRANDE,
+        VENTI
+    }
     public String getDescription() {
         return description;
     }
 
     public abstract double cost();
+
+    public Size getSize() {
+        return size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
+    }
 }

@@ -17,9 +17,22 @@ public class Soy extends CondimentDecorator{
         this.beverage = beverage;//让饮料（被装饰者）被记录到实例变量中
     }
 
+
     @Override
     public double cost() {
-        return beverage.cost() + .15;
+//        return beverage.cost() + .15;
+        double cost = beverage.cost();
+        if(getSize() == Size.TALL)
+            cost += 0.1d;
+        if(getSize() == Size.GRANDE)
+            cost += 0.15d;
+        if(getSize() == Size.VENTI)
+            cost += 0.2d;
+        return cost;
+    }
+
+    public Size getSize(){
+        return beverage.getSize();
     }
 
     @Override
