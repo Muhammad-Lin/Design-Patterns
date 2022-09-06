@@ -1,3 +1,0 @@
-使用依赖倒置原则应用工厂方法
-
-在应用工厂方法后，高层组件（PizzaStore）和低层组件（xxxStylePizza)都依赖了Pizza抽象
