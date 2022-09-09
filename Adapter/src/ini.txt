@@ -1,0 +1,5 @@
+适配器与外观模式
+
+DuckAndTurkey : 面向对象适配器
+
+iterenum : 将枚举适配到迭代器
