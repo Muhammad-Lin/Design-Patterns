@@ -7,5 +7,5 @@ package iterenum;
  **/
 public interface Enumeration {
     public boolean hasMoreElements();
-    public Enumeration nextElement();
+    public Object nextElement();
 }

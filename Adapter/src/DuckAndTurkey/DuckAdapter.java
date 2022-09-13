@@ -1,5 +1,7 @@
 package DuckAndTurkey;
 
+import java.util.Random;
+
 /**
  * @name: DuckAndTurkey.DuckAdapter
  * @author: yoga
@@ -7,9 +9,11 @@ package DuckAndTurkey;
  **/
 public class DuckAdapter implements Turkey {
     Duck duck;
+    Random random;
 
     public DuckAdapter(Duck duck) {
         this.duck = duck;
+        random = new Random();
     }
 
     @Override
@@ -19,6 +23,7 @@ public class DuckAdapter implements Turkey {
 
     @Override
     public void fly() {
-        duck.fly();
+        if(random.nextInt(5) == 0)
+            duck.fly();
     }
 }
