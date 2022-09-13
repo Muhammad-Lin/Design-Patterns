@@ -21,7 +21,7 @@ public class IteratorEnumration implements Enumeration {
     }
 
     @Override
-    public Enumeration nextElement() {
-        return (Enumeration) iterator.next();
+    public Object nextElement() {
+        return iterator.next();
     }
 }
