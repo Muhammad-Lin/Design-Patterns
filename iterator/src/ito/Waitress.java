@@ -1,0 +1,38 @@
+package ito;
+
+import org.jetbrains.annotations.NotNull;
+
+/**
+ * @name: Waitress
+ * @author: yoga
+ * @create: 2022-09-14 11:23
+ **/
+public class Waitress {
+    PancakeHouseMenu pancakeHouseMenu;
+    DinerMenu dinerMenu;
+
+    public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
+        this.pancakeHouseMenu = pancakeHouseMenu;
+        this.dinerMenu = dinerMenu;
+    }
+
+    public void printMenu(){
+        //创建迭代器
+        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
+        Iterator dinerIterator = dinerMenu.createIterator();
+
+        System.out.println("MENU\n----\nBREAKFAST");
+        printMenu(pancakeIterator);
+        System.out.println("\nLUNCH");
+        printMenu(dinerIterator);
+    }
+
+    private void printMenu(@NotNull Iterator iterator){
+        while (iterator.hasNext()){
+            MenuItem menuItem = (MenuItem) iterator.next();
+            System.out.print(menuItem.getName() + ", ");
+            System.out.print(menuItem.getPrice() + " -- ");
+            System.out.println(menuItem.getDescription());
+        }
+    }
+}
