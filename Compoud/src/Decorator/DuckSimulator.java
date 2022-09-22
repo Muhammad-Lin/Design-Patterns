@@ -19,13 +19,15 @@ public class DuckSimulator {
         Quackable rubberDuck = new QuackCounter(new RubberDuck());
         Quackable gooseDuck = new GooseAdapter(new Goose());
 
-        System.out.println("\nDuck Simulator");
+        System.out.println("\nDuck Simulator：With Decorator");
 
         simulate(mallardDuck);
         simulate(redheadDuck);
         simulate(duckCall);
         simulate(rubberDuck);
         simulate(gooseDuck);
+
+        System.out.println("The ducks quacked " + Factory.QuackCounter.getNumberOfQuacks() + " times");
     }
 
     private void simulate(Quackable duck){
