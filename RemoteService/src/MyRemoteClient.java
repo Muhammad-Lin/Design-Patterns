@@ -1,0 +1,22 @@
+import java.rmi.Naming;
+
+/**
+ * @name: MyRemoteClient
+ * @author: yoga
+ * @create: 2022-09-21 11:23
+ **/
+public class MyRemoteClient {
+    public static void main (String[] args){
+        new MyRemoteClient().go();
+    }
+
+    public void go(){
+        try {
+            MyRemote service = (MyRemote) Naming.lookup("rmi://127.0.0.1/RemoteHello");
+            String s = service.sayHello();
+            System.out.println(s);
+        }catch (Exception exception){
+            exception.printStackTrace();
+        }
+    }
+}
