@@ -1,0 +1,11 @@
+针对接口编程（针对超类型（supertype）编程），而不是针对实现编程。
+
+针对超类型编程：变量的声明类型应该是超类型，通常使一个抽象类或者是一个接口
+
+针对实现编程:
+Dog d = new Dog();
+d.bark();
+
+针对接口/超类型编程：
+Animal animal = new Dog();
+animal.makeSound();

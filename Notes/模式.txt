@@ -1,0 +1,32 @@
+模式是在某情境下，针对某问题的某中解决方案。
+
+情境就是应用某个模式的情况
+
+问题就是想在某情境下达到的目标
+
+解决方案就是所追求的：一个通用的设计，用来解决约束，达到目的
+
+
+
+模式分类：
+
+根据模式的目标分成三个不同类目：创建型、行为型和结构型
+
+创建型：【Singleton-单例】、【Builder】、【Prototype】、【Abstract Factory-抽象工厂】、【Factory Method-工厂方法】
+创建型模式涉及到将对象实例化，这些模式都提供一个方法，将客户从所需要的实例化的对象中解耦。
+
+行为型：【Template Method-模板方法】、【Visitor】、【Mediator】、【Iterator-迭代器】、【Command-命令】、【Interpreter】、【Observer-观察者】、【Memento】、【Chain of Responsibility】、【State-状态】、【Strategy-策略】
+只要是行为型模式，都涉及到类和对象如何交互分配职责。
+
+结构型：【Decorator-装饰者】、【Composite-组合】、【Proxy-代理】、【Bridge】、【Facade-外观】、【Adapter-适配器】、【Flyweight】
+结构型模式可以让你把类或对象组合到更大的结构中
+
+
+
+根据模式所处理的是类或对象：类模式、对象模式
+
+类模式：【Template Method-模板方法】、【Adapter-适配器】、【Interpreter】、【Factory Method-工厂方法】
+类模式描述类之间的关系如何通过继承定义。类模式的关系是在编译时建立的。
+
+对象模式：【Singleton-单例】、【Builder】、【Prototype】、【Abstract Factory-抽象工厂】、【Visitor】、【Mediator】、【Iterator-迭代器】、【Command-命令】、Observer-观察者】、【Memento】、【Chain of Responsibility】、【State-状态】、【Strategy-策略】、【Decorator-装饰者】、【Composite-组合】、【Proxy-代理】、【Bridge】、【Facade-外观】、【Flyweight】
+对象模式描述对象之间的关系，而且主要是利用组合定义。对象模式的关系通常在运行时建立，而且更加动态、更有弹性。
